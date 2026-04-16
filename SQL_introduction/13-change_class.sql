@@ -1,2 +1,2 @@
 -- remove all records 
-UPDATE second_table DELETE WHERE score <= 5;
+DELETE FROM second_table WHERE score <= 5;
