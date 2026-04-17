@@ -11,10 +11,7 @@ if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
     payload = {'email': email}
-    
-    # Mandatory firewall bypass header
     headers = {'cfclearance': 'true'}
 
-    # requests.post automatically handles form-encoding the payload
     response = requests.post(url, data=payload, headers=headers)
     print(response.text)
