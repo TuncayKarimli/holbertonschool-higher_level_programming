@@ -15,5 +15,5 @@ if __name__ == "__main__":
     
     print("Body response:")
     # Using 4 spaces to match the 'cat -e' example exactly
-    print("- type: {}".format(type(response.text)))
-    print("- content: {}".format(response.text))
+    print("\t- type: {}".format(type(response.text)))
+    print("\t- content: {}".format(response.text))
