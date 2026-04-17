@@ -13,9 +13,11 @@ if __name__ == "__main__":
     email = sys.argv[2]
     values = {'email': email}
 
+    # Data must be encoded to ASCII bytes for the POST request
     data = urllib.parse.urlencode(values).encode('ascii')
-    req = urllib.request.Request(url, data
+    req = urllib.request.Request(url, data)
 
+    # Adding the mandatory firewall bypass header
     req.add_header('cfclearance', 'true')
 
     with urllib.request.urlopen(req) as response:
