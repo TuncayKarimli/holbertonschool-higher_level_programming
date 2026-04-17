@@ -8,12 +8,9 @@ import requests
 
 if __name__ == "__main__":
     url = "https://intranet.hbtn.io/status"
-    # Mandatory firewall bypass header
     headers = {'cfclearance': 'true'}
-
     response = requests.get(url, headers=headers)
-    
+    body = response.text
     print("Body response:")
-    # Using 4 spaces to match the 'cat -e' example exactly
-    print("\t- type: {}".format(type(response.text)))
-    print("\t- content: {}".format(response.text))
+    print("\t- type: {}".format(type(body)))
+    print("\t- content: {}".format(body))
