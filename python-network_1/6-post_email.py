@@ -14,5 +14,6 @@ if __name__ == "__main__":
     
     headers = {'cfclearance': 'true'}
 
+    # requests.post automatically handles form-encoding the payload
     response = requests.post(url, data=payload, headers=headers)
     print(response.text)
